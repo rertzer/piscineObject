@@ -6,7 +6,7 @@
 /*   By: rertzer <rertzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 15:30:54 by rertzer           #+#    #+#             */
-/*   Updated: 2024/04/01 15:37:26 by rertzer          ###   ########.fr       */
+/*   Updated: 2024/04/09 14:19:55 by rertzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 Account::Account():value(0)
 {
+	if (id < 0)
+		throw (IdException());
 	id = id_counter;
 	++id_counter;
 }
